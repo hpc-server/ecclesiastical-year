@@ -1,0 +1,21 @@
+{
+    "name": "hpc/ecclesiastical-year",
+    "type": "library",
+    "description": "The EcclesiasticalYear component provides a formated ecclesiastical-year date based on timestamp.",
+    "license": "MIT",
+    "homepage": "https://host24-profi.com",
+    "authors": [
+        {
+            "name": "Stephan Suess",
+            "email": "post@host24-profi.com"
+        }
+    ],
+    "require": {
+        "php": "^5.5.9|>=7.0.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hpc\\Component\\EcclesiasticalYear": ""
+        }
+    }
+}
