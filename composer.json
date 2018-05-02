@@ -1,5 +1,5 @@
 {
-    "name": "hpc/ecclesiastical-year",
+    "name": "hpc-server/ecclesiastical-year",
     "type": "library",
     "description": "The EcclesiasticalYear component provides a formated ecclesiastical-year date based on timestamp.",
     "license": "MIT",
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Hpc\\Component\\EcclesiasticalYear": ""
+            "Hpc\\Component\\EcclesiasticalYear\\": ""
         }
     }
 }
