@@ -1,12 +1,9 @@
 <?php
 /**
- * User: stephansuess
- * @category    Arvato
- * @package     Arvato_
- * @copyright   Copyright (c) Arvato
+ * @category    hpc-server
+ * @package     EcclesiasticalYear_Validation
+ * @copyright   Copyright (c) HPC
  * @author      Stephan Suess
- * Date: 12.02.18
- * Time: 20:03
  */
 
 namespace EcclesiasticalYear\Validation;
