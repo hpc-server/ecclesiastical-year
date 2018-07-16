@@ -6,10 +6,10 @@
  * @author      Stephan Suess
  */
 
-namespace EcclesiasticalYear\Validation;
+namespace Hpc\Component\EcclesiasticalYear\Validation;
 
-use EcclesiasticalYear\Validation\Exceptions\ModuleException;
-use EcclesiasticalYear\Validation\Rules\InterfaceRules;
+use Hpc\Component\EcclesiasticalYear\Validation\Exceptions\ModuleException;
+use Hpc\Component\EcclesiasticalYear\Validation\Rules\InterfaceRules;
 
 class Date implements InterfaceRules
 {

@@ -6,7 +6,7 @@
  * @author      Stephan Suess
  */
 
-namespace EcclesiasticalYear\Validation\Rules;
+namespace Hpc\Component\EcclesiasticalYear\Validation\Rules;
 
 /**
  * Interface Rules

@@ -6,17 +6,17 @@
  * @author      Stephan Suess
  */
 
-namespace EcclesiasticalYear\Validation;
+namespace Hpc\Component\EcclesiasticalYear\Validation;
 
 
-use EcclesiasticalYear\Validation\Exceptions\ModuleException;
+use Hpc\Component\EcclesiasticalYear\Validation\Exceptions\ModuleException;
 use ReflectionClass;
 
 class Factory
 {
     const SUFFIX = 'Rule';
 
-    const PREFIX = 'EcclesiasticalYear\\Validation\\Rules\\';
+    const PREFIX = 'Hpc\\Component\\EcclesiasticalYear\\Validation\\Rules\\';
 
 
     /**
@@ -35,7 +35,7 @@ class Factory
         }
 
         $reflection = new ReflectionClass($className);
-        if (!$reflection->isSubclassOf('EcclesiasticalYear\\Validation\\Rules\\InterfaceRules')) {
+        if (!$reflection->isSubclassOf('Hpc\\Component\\EcclesiasticalYear\\Validation\\Rules\\InterfaceRules')) {
             throw new ModuleException(sprintf('"%s" is not a valid rule!', $className));
         }
 

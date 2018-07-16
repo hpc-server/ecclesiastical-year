@@ -6,7 +6,7 @@
  * @author      Stephan Suess
  */
 
-namespace EcclesiasticalYear\Validation\Exceptions;
+namespace Hpc\Component\EcclesiasticalYear\Validation\Exceptions;
 
 use Exception;
 
