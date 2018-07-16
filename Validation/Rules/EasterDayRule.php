@@ -6,9 +6,7 @@
  * @author      Stephan Suess
  */
 
-namespace EcclesiasticalYear\Validation\Rules;
-
-
+namespace Hpc\Component\EcclesiasticalYear\Validation\Rules;
 
 
 class EasterDayRule extends AbstractRules implements InterfaceRules
