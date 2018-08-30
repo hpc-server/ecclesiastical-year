@@ -9,7 +9,7 @@
 namespace Hpc\Component\EcclesiasticalYear\Validation\Rules;
 
 
-class MaundyThursdayRule extends AbstractRules implements InterfaceRules
+class ChristmasEveRule extends AbstractRules implements InterfaceRules
 {
     /**
      * @param string $input
@@ -20,7 +20,7 @@ class MaundyThursdayRule extends AbstractRules implements InterfaceRules
     {
         $this->inputValue = $input;
         $this->setName();
-        return ($this->inputValue == ($this->dateEaster - (3 * self::SECONDS_PER_DAY)));
+        return ($this->inputValue == $this->dateChristmasEve);
     }
 
     /**
@@ -36,6 +36,6 @@ class MaundyThursdayRule extends AbstractRules implements InterfaceRules
      */
     protected function setName()
     {
-        $this->DateName = 'Gründonnerstag';
+        $this->DateName = 'Heiligerabend';
     }
 }

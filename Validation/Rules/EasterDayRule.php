@@ -20,7 +20,7 @@ class EasterDayRule extends AbstractRules implements InterfaceRules
     {
         $this->inputValue = $input;
         $this->setName();
-        return ($this->inputValue == easter_date(date('Y')));
+        return ($this->inputValue == $this->dateEaster);
     }
 
     /**
@@ -28,7 +28,7 @@ class EasterDayRule extends AbstractRules implements InterfaceRules
      */
     public function getFormatedDate()
     {
-        return date('l, d.m.Y', $this->inputValue) . ' - ' . $this->DateName;
+        return $this->formatDate();
     }
 
     /**
