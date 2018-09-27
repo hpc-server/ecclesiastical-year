@@ -13,11 +13,9 @@ use Hpc\Component\EcclesiasticalYear\Validation\Rules\InterfaceRules;
 
 class Date implements InterfaceRules
 {
+    const RULES_FILE_PATTERN = "/(.*)Rule.php/";
 
-    private $rulesArrayByNames = [
-        'EasterDay',
-        'MaundyThursday'
-    ];
+    const RULES_DIRECTORY = 'Rules';
 
     private $rulesArrayByObjects = [];
 
@@ -61,6 +59,8 @@ class Date implements InterfaceRules
          */
         foreach ($this->rulesArrayByObjects as $ruleName => $ruleObject)
         {
+            $ruleObject->initRule($input);
+
             if ($ruleObject->checkDate($input))
             {
                 return $ruleObject;
@@ -90,7 +90,7 @@ class Date implements InterfaceRules
     {
         try
         {
-            foreach ($this->rulesArrayByNames as $ruleName)
+            foreach ($this->loadRuleClasses() as $ruleName)
             {
                 $this->rulesArrayByObjects[$ruleName] = static::getFactory()->build($ruleName);
             }
@@ -99,5 +99,22 @@ class Date implements InterfaceRules
         {
             throw new ModuleException($exception->getMessage(), $exception->getCode(), $exception);
         }
+    }
+
+    /**
+     * @return array
+     */
+    private function loadRuleClasses()
+    {
+        $ruleClasses = [];
+        $files = scandir(__DIR__ . DIRECTORY_SEPARATOR . self::RULES_DIRECTORY);
+        foreach ($files as $file)
+        {
+            if (preg_match(self::RULES_FILE_PATTERN, $file, $match))
+            {
+                $ruleClasses[] = $match[1];
+            }
+        }
+        return $ruleClasses;
     }
 }
