@@ -1,7 +1,10 @@
 # CHANGELOG
 
-## unreleased - [v0.0.4]
+## unreleased - []
 
+
+## 2018-09-27 - [v1.0.0]
+* Complete all rules for ecclesiastical year
 
 ## 2018-07-16 - [v0.0.3]
 * Change module to component module
