@@ -2,6 +2,8 @@
 
 ## unreleased - []
 
+## 2018-09-27 - [v1.1.0]
+* Complete all rules for ecclesiastical year
 
 ## 2018-09-27 - [v1.0.0]
 * Complete all rules for ecclesiastical year
