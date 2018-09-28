@@ -9,7 +9,7 @@
 namespace Hpc\Component\EcclesiasticalYear\Validation\Rules;
 
 
-class EasterDayRule extends AbstractRules implements InterfaceRules
+class MisericordiasSundayRule extends AbstractRules implements InterfaceRules
 {
     /**
      * @param string $input
@@ -20,7 +20,7 @@ class EasterDayRule extends AbstractRules implements InterfaceRules
     {
         $this->inputValue = $input;
         $this->setName();
-        return ($this->inputValue == $this->dateEaster);
+        return ($this->inputValue == ($this->datePentecost - (35 * self::SECONDS_PER_DAY)));
     }
 
     /**
@@ -36,6 +36,6 @@ class EasterDayRule extends AbstractRules implements InterfaceRules
      */
     protected function setName()
     {
-        $this->DateName = 'Ostersonntag';
+        $this->DateName = 'Misericordias Domini';
     }
 }

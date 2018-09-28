@@ -9,7 +9,7 @@
 namespace Hpc\Component\EcclesiasticalYear\Validation\Rules;
 
 
-class PentecostRule extends AbstractRules implements InterfaceRules
+class ExaudiSundayRule extends AbstractRules implements InterfaceRules
 {
     /**
      * @param string $input
@@ -20,7 +20,7 @@ class PentecostRule extends AbstractRules implements InterfaceRules
     {
         $this->inputValue = $input;
         $this->setName();
-        return ($this->inputValue == $this->datePentecost);
+        return ($this->inputValue == ($this->datePentecost - (7 * self::SECONDS_PER_DAY)));
     }
 
     /**
@@ -36,6 +36,6 @@ class PentecostRule extends AbstractRules implements InterfaceRules
      */
     protected function setName()
     {
-        $this->DateName = 'Pfingsten';
+        $this->DateName = 'Exaudi';
     }
 }
